@@ -35,6 +35,42 @@ for(i in 1:365){
     break;
   }
 }
+#3
+p_rain<-0.2
+p_cloudy<-0.4
+p_cloudyRain<-0.85
+BayesTheorem<-function(p_rain,p_cloudy,p_cloudyRain)
+{
+  p_rainCloudy<-p_rain*p_cloudyRain/p_cloudy;
+}
+prod= BayesTheorem(p_rain,p_cloudy,p_cloudyRain)
+print(prod)
+
+
+#4
+head(iris) 
+str(iris)
+range(data$Sepal.Length)
+mean(iris$Sepal.Length) 
+median(iris$Sepal.Length)
+quantile(data$Sepal.Length,0.25)
+quantile(data$Sepal.Length,0.75)
+IQR(data$Sepal.Length)
+sd(iris$Sepal.Length)
+var(iris$Sepal.Length)
+summary(iris)
+#we have to analyse the in built datasets
+
+#5
+arr<-c(11,18,19,21,29,46,21)
+mode<-function(v){
+  a <- unique(v)
+  a[which.max(tabulate(match(v,a)))]
+}
+result<-mode(arr)
+print(result) 
+
+
 
 
 
